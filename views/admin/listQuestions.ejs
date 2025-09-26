@@ -1,0 +1,10 @@
+<%- include("../partials/header") %>
+<div class="container">
+  <h2>All Questions</h2>
+  <ul>
+    <% questions.forEach(q => { %>
+      <li><b><%= q.question %></b> - Correct: <%= q.correctAnswer %></li>
+    <% }) %>
+  </ul>
+</div>
+<%- include("../partials/footer") %>

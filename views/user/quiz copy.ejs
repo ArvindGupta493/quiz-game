@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+<div class="container">
+  <h3>Question <%= index+1 %> of <%= questions.length %></h3>
+  <p><%= questions[index].question %></p>
+  <form action="/submit-answer" method="POST">
+    <% questions[index].options.forEach(opt => { %>
+      <label>
+        <input type="radio" name="answer" value="<%= opt %>" required> <%= opt %>
+      </label><br>
+    <% }) %>
+    <input type="hidden" name="username" value="<%= username %>">
+    <input type="hidden" name="index" value="<%= index %>">
+    <button type="submit">Next</button>
+  </form>
+</div>
+<%- include("../partials/footer") %>
