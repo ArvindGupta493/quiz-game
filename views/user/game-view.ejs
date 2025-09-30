@@ -258,5 +258,20 @@
             sidebar.classList.add("-translate-x-full");
         });
     </script>
+        <script>
+  const btn = document.getElementById('notif-btn');
+  const menu = document.getElementById('notif-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Optional: Close when clicking outside
+  window.addEventListener('click', function (e) {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+</script>
 </body>
 </html>

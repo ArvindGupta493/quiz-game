@@ -33,20 +33,249 @@
                 </div>
 
                 <!-- Right Icons -->
-                <div class="flex items-center space-x-2 md:space-x-4">
+   <div class="flex items-center space-x-2 md:space-x-4">
                     <button class="relative p-1 rounded-xl bg-gray-800/50 border border-purple-500/30 text-gray-400 hover:text-white hover:border-purple-400/60 transition-all duration-300 group">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                         </svg>
                         <div class="absolute inset-0 rounded-xl bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
-                    <button class="relative p-1 rounded-xl bg-gray-800/50 border border-purple-500/30 text-gray-400 hover:text-white hover:border-purple-400/60 transition-all duration-300 group">
-                        <svg class="w-8 h-8" fill="#9ca3af" version="1.2" viewBox="0 0 800 800" width="800" height="800">
-                            <path class="s0" d="m605.99 553.17c-50.67-23.08-52.6-122.16-52.64-124.66v-66.48c0-63.98-38.76-118.99-93.84-142.41-0.12-32.9-26.68-59.62-59.31-59.62-32.64 0-59.2 26.72-59.32 59.61-55.07 23.43-93.83 78.44-93.83 142.42v66.47c-0.04 2.5-1.97 101.59-52.65 124.67-5.77 2.63-8.95 8.97-7.61 15.22 1.33 6.25 6.81 10.71 13.15 10.71h128.47c2.64 14.61 9.49 28.21 19.97 39.22 13.91 14.62 32.32 22.68 51.82 22.68 19.5 0 37.9-8.06 51.81-22.68 10.48-11.01 17.34-24.61 19.97-39.22h128.48c6.33 0 11.81-4.46 13.14-10.71 1.34-6.25-1.83-12.59-7.61-15.22zm-66.75-47.46c5.32 16.29 12.87 32.65 23.56 46.26h-325.21c10.7-13.61 18.24-29.97 23.57-46.26zm-139.04-318.58c14.76 0 27.24 10 31.15 23.64-10.06-2.1-20.48-3.21-31.15-3.21-10.67 0-21.09 1.1-31.15 3.21 3.91-13.64 16.39-23.64 31.15-23.64zm-126.26 241.46v-66.56c0-70.22 56.64-127.35 126.26-127.35 69.62 0 126.26 57.13 126.26 127.35v66.67c0.01 2.04 0.33 23.48 5.69 49.88h-263.9c5.36-26.42 5.67-47.9 5.69-49.99zm126.26 185.28c-20.53 0-38.44-14.92-44.19-34.77h88.38c-5.75 19.85-23.66 34.77-44.19 34.77z"/>
-                        </svg>
-                        <div class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></div>
-                        <div class="absolute inset-0 rounded-xl bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </button>
+                                      <div class="notification">
+                        <button id="notif-btn" class="relative p-1 rounded-xl bg-gray-800/50 border border-purple-500/30 text-gray-400 hover:text-white hover:border-purple-400/60 transition-all duration-300 group">
+                            <svg class="w-8 h-8" fill="#9ca3af" version="1.2" viewBox="0 0 800 800" width="800" height="800">
+                                <path class="s0" d="m605.99 553.17c-50.67-23.08-52.6-122.16-52.64-124.66v-66.48c0-63.98-38.76-118.99-93.84-142.41-0.12-32.9-26.68-59.62-59.31-59.62-32.64 0-59.2 26.72-59.32 59.61-55.07 23.43-93.83 78.44-93.83 142.42v66.47c-0.04 2.5-1.97 101.59-52.65 124.67-5.77 2.63-8.95 8.97-7.61 15.22 1.33 6.25 6.81 10.71 13.15 10.71h128.47c2.64 14.61 9.49 28.21 19.97 39.22 13.91 14.62 32.32 22.68 51.82 22.68 19.5 0 37.9-8.06 51.81-22.68 10.48-11.01 17.34-24.61 19.97-39.22h128.48c6.33 0 11.81-4.46 13.14-10.71 1.34-6.25-1.83-12.59-7.61-15.22zm-66.75-47.46c5.32 16.29 12.87 32.65 23.56 46.26h-325.21c10.7-13.61 18.24-29.97 23.57-46.26zm-139.04-318.58c14.76 0 27.24 10 31.15 23.64-10.06-2.1-20.48-3.21-31.15-3.21-10.67 0-21.09 1.1-31.15 3.21 3.91-13.64 16.39-23.64 31.15-23.64zm-126.26 241.46v-66.56c0-70.22 56.64-127.35 126.26-127.35 69.62 0 126.26 57.13 126.26 127.35v66.67c0.01 2.04 0.33 23.48 5.69 49.88h-263.9c5.36-26.42 5.67-47.9 5.69-49.99zm126.26 185.28c-20.53 0-38.44-14.92-44.19-34.77h88.38c-5.75 19.85-23.66 34.77-44.19 34.77z"/>
+                            </svg>
+                            <div class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></div>
+                            <div class="absolute inset-0 rounded-xl bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                        <div id="notif-menu" class="hidden absolute right-0 top-full mt-2 w-96 bg-gradient-to-br from-gray-900/95 via-black/95 to-purple-900/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl shadow-2xl shadow-cyan-500/20 z-50 overflow-hidden">
+                            <div class="p-4 border-b border-cyan-500/20 flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-bell h-5 w-5 text-cyan-400"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+                                        <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path>
+                                    </svg>
+                                    <h3 class="font-semibold text-white">Notifications</h3>
+                                    <span class="bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">2 new</span>
+                                </div>
+                                <button type="button" class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 text-cyan-400 hover:text-cyan-300 text-xs">
+                                    Mark all read
+                                </button>
+                            </div>
+                            <div class="overflow-y-auto custom-scrollbar">
+                                <div class="p-2">
+                                    <div class="p-3 mb-2 rounded-xl border transition-all duration-300 cursor-pointer group bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 border-green-500/30 hover:border-green-400/50 hover:shadow-lg">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-5 w-5 text-green-400"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <h4 class="font-medium text-sm text-white">New User Registered</h4>
+                                                    <div class="flex items-center space-x-1">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-clock h-3 w-3 text-gray-500"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <path d="M12 6v6l4 2"></path>
+                                                            <circle cx="12" cy="12" r="10"></circle>
+                                                        </svg>
+                                                        <span class="text-xs text-gray-500">2 min ago</span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-sm text-gray-300">GamerPro123 has joined the quiz platform</p>
+                                                <div class="mt-2"><div class="h-1 w-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 mb-2 rounded-xl border transition-all duration-300 cursor-pointer group bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 border-blue-500/30 hover:border-blue-400/50 hover:shadow-lg">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-zap h-5 w-5 text-blue-400"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <h4 class="font-medium text-sm text-white">Quiz Completed</h4>
+                                                    <div class="flex items-center space-x-1">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-clock h-3 w-3 text-gray-500"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <path d="M12 6v6l4 2"></path>
+                                                            <circle cx="12" cy="12" r="10"></circle>
+                                                        </svg>
+                                                        <span class="text-xs text-gray-500">15 min ago</span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-sm text-gray-300">Gaming Quiz #47 was completed by 12 users</p>
+                                                <div class="mt-2"><div class="h-1 w-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 mb-2 rounded-xl border transition-all duration-300 cursor-pointer group bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="p-2 rounded-lg bg-gray-700/50">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-triangle-alert h-5 w-5 text-yellow-400"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path>
+                                                    <path d="M12 9v4"></path>
+                                                    <path d="M12 17h.01"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <h4 class="font-medium text-sm text-gray-300">System Update</h4>
+                                                    <div class="flex items-center space-x-1">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-clock h-3 w-3 text-gray-500"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <path d="M12 6v6l4 2"></path>
+                                                            <circle cx="12" cy="12" r="10"></circle>
+                                                        </svg>
+                                                        <span class="text-xs text-gray-500">1 hour ago</span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-sm text-gray-500">Scheduled maintenance in 2 hours</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 mb-2 rounded-xl border transition-all duration-300 cursor-pointer group bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="p-2 rounded-lg bg-gray-700/50">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-circle-check-big h-5 w-5 text-green-400"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                                                    <path d="m9 11 3 3L22 4"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center justify-between mb-1">
+                                                    <h4 class="font-medium text-sm text-gray-300">High Score Achieved</h4>
+                                                    <div class="flex items-center space-x-1">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="24"
+                                                            height="24"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-clock h-3 w-3 text-gray-500"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <path d="M12 6v6l4 2"></path>
+                                                            <circle cx="12" cy="12" r="10"></circle>
+                                                        </svg>
+                                                        <span class="text-xs text-gray-500">3 hours ago</span>
+                                                    </div>
+                                                </div>
+                                                <p class="text-sm text-gray-500">New record set in Battle Royale Quiz!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 border-t border-cyan-500/20 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-cyan-500/5">
+                                <button type="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 w-full text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10">
+                                    View All Notifications
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <button type="button" id="sidebar-toggle" class="relative p-1 rounded-xl bg-gray-800/50 border border-purple-500/30 text-gray-400 hover:text-white hover:border-purple-400/60 transition-all duration-300 group lg:hidden">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +283,7 @@
                         </svg>
                     </button>
                 </div>
-            </div>
+                        </div>
         </div>
     </nav>
     <!-- Main Layout -->
@@ -301,5 +530,20 @@
     closeBtn.addEventListener("click", () => {
         sidebar.classList.add("-translate-x-full");
     });
+</script>
+    <script>
+  const btn = document.getElementById('notif-btn');
+  const menu = document.getElementById('notif-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Optional: Close when clicking outside
+  window.addEventListener('click', function (e) {
+    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
 </script>
 </html>
