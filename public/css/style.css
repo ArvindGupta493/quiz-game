@@ -219,8 +219,12 @@ html {
 }
 
 .sidebar-item.active {
+    color: #FFF;
     background: linear-gradient(to right, rgb(168 85 247 / 0.2), rgb(6 182 212 / 0.2));
     border-color: rgb(168 85 247 / 0.4);
+}
+.sidebar-item.active svg * {
+    stroke: #FFF;
 }
 #sidebar-close {
     position: absolute;
@@ -234,6 +238,41 @@ html {
 }
 .dash-logo img {
     max-width: 170px;
+}
+.quizpopup>div {
+    max-width: 800px;
+    margin: auto;
+}
+.filter-btn.user-row-active {
+    --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-to: #06b6d4 var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.dd-aside .sidebar-item.active {
+    color: #FFF;
+    background: linear-gradient(to right, rgba(96, 165, 250, 0.2), rgba(74, 222, 128, 0.2));
+    border-color: rgba(96, 165, 250, 0.4);
+}
+.dd-filter-btn.dd-user-row-active {
+    --tw-text-opacity: 1;
+    color: rgb(34 211 238 / var(--tw-text-opacity, 1));
+    --tw-border-opacity: 1;
+    border-color: rgb(34 211 238 / var(--tw-border-opacity, 1));
+}
+.vd-aside .sidebar-item.active {
+    color: #FFF;
+    background: linear-gradient(to right, rgba(74, 222, 128, 0.2), rgba(22, 163, 74, 0.2));
+    border-color: rgba(74, 222, 128, 0.4);
+}
+.vd-filter-btn.vd-user-row-active {
+    --tw-text-opacity: 1;
+    color: #05df72;
+    --tw-border-opacity: 1;
+    border-color: #05df72;
 }
 @media only screen and (max-width: 1023px) {
     #default-sidebar {
@@ -265,6 +304,10 @@ html {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  #notif-menu {
+    right: -20px;
+    width: 20rem;
+  }
 }
 @media only screen and (max-width: 375px) {
   .dash-logo img {
@@ -284,9 +327,4 @@ html {
   #sidebar-close {
     right: -26px;
   }
-}
-
-.quizpopup>div {
-    max-width: 800px;
-    margin: auto;
 }

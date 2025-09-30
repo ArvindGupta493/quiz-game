@@ -1,64 +1,3 @@
-// const Question = require("../models/Question");
-
-// // Render admin dashboard
-// exports.getDashboard = (req, res) => {
-//   res.render("admin/dashboard", {
-//     user: {
-//       initials: "SG",
-//       name: "Swaraj Gupta",
-//       role: "Administrator",
-//     },
-//   });
-// };
-
-// // Render add quiz page
-// exports.getAddQuiz = (req, res) => {
-//   res.render("admin/addQuiz", {
-//     user: {
-//       initials: "SG",
-//       name: "Swaraj Gupta",
-//       role: "Administrator",
-//     },
-//   });
-// };
-
-// // Save new quiz question
-// exports.postAddQuiz = async (req, res) => {
-//   const { quizTitle, optionA, optionB, optionC, optionD, correctAnswer } = req.body;
-
-//   const newQuestion = new Question({
-//     question: quizTitle,
-//     options: [optionA, optionB, optionC, optionD],
-//     correctAnswer: correctAnswer
-//   });
-
-//   try {
-//     await newQuestion.save();
-//     res.redirect("/admin");
-//   } catch (error) {
-//     console.error(error);
-//     res.render("admin/addQuiz", {
-//       user: {
-//         initials: "SG",
-//         name: "Swaraj Gupta",
-//         role: "Administrator",
-//       },
-//       error: "Failed to create quiz question",
-//     });
-//   }
-// };
-
-// // Render settings page
-// exports.getSettings = (req, res) => {
-//   res.render("admin/settings", {
-//     user: {
-//       initials: "SG",
-//       name: "Swaraj Gupta",
-//       role: "Administrator",
-//     },
-//   });
-// };
-
 const Question = require("../models/Question");
 
 exports.dashboard = (req, res) => {
@@ -67,6 +6,14 @@ exports.dashboard = (req, res) => {
 
 exports.settings = (req, res) => {
   res.render("admin/admin-settings");
+};
+
+exports.distributor = (req, res) => {
+  res.render("admin/distributor-dashboard");
+};
+
+exports.vendor = (req, res) => {
+  res.render("admin/vendor-dashboard");
 };
 
 // Render add question page
